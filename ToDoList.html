@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>ToDo List</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <p class="main-title">ToDo list</p>
+        <div class="input-items">
+
+        <input type="text" class="name-input" placeholder="Name">
+        <input type="date" class="date-input" >
+        <input type="time" class="time-input">
+        <div class="priority-container"><div class="label">
+            Priority: 
+        </div>
+        <div class="dropdown-container"><select class="priority-input" name="priority">
+            <option value="low" >Low</option>
+            <option value="medium" selected="selected">Medium</option>
+            <option value="high" >High</option>
+
+        </select>
+    </div>
+    </div>
+        
+        <input type="text" class="category-input" placeholder="Category:">
+        <button class="submit-button" onclick="
+        console.log('button clicked');
+        addElement();">Submit</button>
+        </div>
+        <div class="error-line">
+
+        </div>
+<div class="filters">        
+        <div class="filter-item">
+            <div class="filter-label">
+        Sort By:
+            </div>
+            <div class="sort-container">
+            <select class="sort-by" name="sorter" onchange="sort();">
+            
+            <option value="default" selected="selected">Default</option>
+            <option value="recent" >Most Recent</option>
+            <option value="priority high">Priority: High</option>
+            <option value="priority medium">Priority: Medium</option>
+            <option value="priority low">Priority: Low</option>
+            <option value = "oldest">Oldest</option>
+            <option value = "time most">Most time</option>
+            <option value="time least">Least time</option>
+            
+
+
+            </select>
+            </div>
+        </div>
+
+     
+    <div class="filter-item">
+        <div class="filter-label">
+    Audio:
+        </div>
+    <div class="sort-container"><select class="audio-selection" name="sorter">
+            
+    <option value="rickroll" selected="selected">Song</option>
+    <option value="edm" >EDM</option>
+    <option value="silent" >Silent</option>
+    <option value="relax" >Relaxing</option>
+        
+
+
+    </select>
+    </div>
+    </div>
+
+</div>
+        <div class="row-titles">
+            <div class="title">Name</div>
+            <div class="title">Due Date</div>
+            <div class="title">Time due</div>
+            <div class="title">Time left</div>
+            <div class="title">Progress</div>
+            <div class="title">Priority</div>
+            <div class="title">Category</div>
+            <div class="title">Delete button</div>
+
+        </div>
+        <div class="todolist">
+
+         <!--
+        <label for="time">Progress</label>
+        <progress id="time" value="64" max="100"></progress>-->
+  
+        </div>
+        <div class="alert">
+            <div class="message"></div>
+            <div class="ok-button-container"><button class="ok-button" onclick="stop_audio();">Ok</button></div>
+        </div>
+        <script src="scripts/script.js">
+ 
+        </script>
+    </body>
+</html>
